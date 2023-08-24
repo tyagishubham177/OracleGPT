@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OracleGPT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Compare GPT Models</h1>
+      <form id="compare-form">
+        <textarea placeholder="Model Name 1" id="model1"></textarea>
+        <textarea placeholder="Model Name 2" id="model2"></textarea>
+        <textarea placeholder="OpenAPI Key" id="openai_api_key"></textarea>
+        <textarea placeholder="Question" id="question"></textarea>
+        <button type="submit">Compare</button>
+      </form>
+      <div id="status">
+        <div id="spinner"></div>
+        <p id="status-message"></p>
+      </div>
+      <div id="results">
+        <h2>Results</h2>
+        <div id="answer1"></div>
+        <div id="answer2"></div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

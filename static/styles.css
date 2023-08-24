@@ -1,0 +1,59 @@
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+textarea#model1,
+textarea#model2,
+textarea#openai_api_key {
+    width: 100%;
+    height: 30px; /* Set the height for the textareas with model names and OpenAPI Key */
+    margin-bottom: 20px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+textarea#question {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#results {
+    display: none;
+}
+
+#answer1, #answer2 {
+    width: 48%;
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 200px; /* Set a fixed height for the answer divs */
+    overflow-y: scroll; /* Make them scrollable if the content exceeds the height */
+}
+
+button {
+    display: block;
+    margin: 10px 0;
+}
+
+#status {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#spinner {
+    display: none;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 5px solid #000000;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
